@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://cv5gaapfms86i"]
+
+[ext_resource type="Script" uid="uid://cmpq38w1w5k3d" path="res://player.gd" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://b3vg7ng244qcw" path="res://icon.png" id="2_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://piunvsoi7soo" path="res://textures/ic_pause.png" id="2_hqtel"]
+[ext_resource type="StyleBox" uid="uid://cd6p3rl0w6v6d" path="res://empty_stylebox.tres" id="2_onrkg"]
+[ext_resource type="Shader" uid="uid://dd0dyup5c7bf2" path="res://editor.gdshader" id="2_sweqy"]
+[ext_resource type="Script" uid="uid://bg70o2tk6bm62" path="res://player_pause.gd" id="5_2hs0m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rm72r"]
+shader = ExtResource("2_sweqy")
+shader_parameter/blur_amount = 5.0000003325
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3pqv"]
+bg_color = Color(1, 1, 1, 0.5019608)
+border_width_right = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hqtel"]
+bg_color = Color(1, 1, 1, 0.5019608)
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+
+[node name="Player" type="AspectRatioContainer" unique_id=1642397262]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+script = ExtResource("1_4flbx")
+
+[node name="Illustration" type="TextureRect" parent="." unique_id=2016128605]
+z_index = -4096
+layout_mode = 2
+texture = ExtResource("2_1jxqw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Blur" type="ColorRect" parent="Illustration" unique_id=1759352179]
+material = SubResource("ShaderMaterial_rm72r")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Black" type="ColorRect" parent="Illustration" unique_id=781434027]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5019608)
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=620708716]
+clip_contents = true
+layout_mode = 2
+
+[node name="Control" type="Control" parent="MarginContainer" unique_id=299258039]
+layout_mode = 2
+
+[node name="Progress" type="ProgressBar" parent="MarginContainer/Control" unique_id=1938840296]
+z_index = 2048
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 8.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/background = ExtResource("2_onrkg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_i3pqv")
+step = 0.0
+show_percentage = false
+
+[node name="Panel" type="Panel" parent="MarginContainer/Control" unique_id=1248614306]
+modulate = Color(1, 1, 1, 0)
+z_index = 2048
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 64.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hqtel")
+script = ExtResource("5_2hs0m")
+
+[node name="Pause" type="TextureRect" parent="MarginContainer/Control" unique_id=489106239]
+z_index = 2048
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("2_hqtel")
+expand_mode = 1
+
+[node name="Number" type="Label" parent="MarginContainer/Control" unique_id=1783946012]
+z_index = 2048
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -28.5
+offset_top = 12.0
+offset_right = 28.5
+offset_bottom = 53.0
+grow_horizontal = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 40
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Combo" type="Label" parent="MarginContainer/Control" unique_id=845953615]
+z_index = 2048
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -28.5
+offset_top = 52.0
+offset_right = 28.5
+offset_bottom = 69.0
+grow_horizontal = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 16
+text = "COMBO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Score" type="MarginContainer" parent="MarginContainer/Control" unique_id=451320329]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -183.0
+offset_bottom = 65.0
+grow_horizontal = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Score" type="Label" parent="MarginContainer/Control/Score" unique_id=316712039]
+z_index = 2048
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 36
+text = "0000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Chart" type="MarginContainer" parent="MarginContainer/Control" unique_id=750674487]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+offset_right = 64.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Chart" type="Label" parent="MarginContainer/Control/Chart" unique_id=190686443]
+z_index = 2048
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Chart"
+vertical_alignment = 2
+
+[node name="Level" type="MarginContainer" parent="MarginContainer/Control" unique_id=874453235]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -64.0
+offset_top = -64.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Level" type="Label" parent="MarginContainer/Control/Level" unique_id=489060085]
+z_index = 2048
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "Level"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=1858578159]
+
+[connection signal="resized" from="." to="." method="_on_resized"]

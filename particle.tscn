@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cwgb56byqsl3f"]
+
+[ext_resource type="Script" uid="uid://c77jywr1m75d2" path="res://click_particle.gd" id="1_kgu82"]
+
+[node name="Particle" type="ColorRect" unique_id=1626976389]
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -0.5)
+offset_transform_visual_only = false
+script = ExtResource("1_kgu82")

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://v6unmqtew3xk"]
+
+[ext_resource type="Script" uid="uid://d4an0lywfbwsh" path="res://curve_preview.gd" id="1_3u755"]
+
+[node name="Control" type="Control" unique_id=1354588922]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 640.0
+offset_bottom = 640.0
+script = ExtResource("1_3u755")

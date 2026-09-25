@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://w50qsucm8an7"]
+
+[ext_resource type="Script" uid="uid://bdcueiw07wyne" path="res://click.gd" id="1_fv4w2"]
+
+[node name="Hold" type="TextureRect" unique_id=927614789]
+z_index = 1023
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -1)
+offset_transform_visual_only = false
+expand_mode = 1
+script = ExtResource("1_fv4w2")
+
+[node name="End" type="TextureRect" parent="." unique_id=16245587]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 2.295684
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(0, -1)
+offset_transform_visual_only = false
+expand_mode = 5
+stretch_mode = 6
+
+[node name="Head" type="TextureRect" parent="." unique_id=704424683]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(0, 1)
+offset_transform_visual_only = false
+expand_mode = 5
+stretch_mode = 6
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1890179032]
+
+[node name="Timer" type="Timer" parent="." unique_id=913362859]
+wait_time = 0.2
+ignore_time_scale = true

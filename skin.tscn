@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://b2smflky6obe7"]
+
+[ext_resource type="Script" uid="uid://cxncerk7bmqo7" path="res://skin.gd" id="1_slxxm"]
+[ext_resource type="Script" uid="uid://btie8ug0ar7hw" path="res://skin_check.gd" id="2_lkge1"]
+[ext_resource type="Texture2D" uid="uid://clgi3wsbi1cqq" path="res://textures/check.png" id="2_ogs51"]
+[ext_resource type="Texture2D" uid="uid://b0d1ibo2d5gu7" path="res://textures/delete.png" id="3_5n2vx"]
+[ext_resource type="Script" uid="uid://dwxd8m3s7aa0b" path="res://skin_delete.gd" id="4_2kaph"]
+
+[node name="Skin" type="HBoxContainer" unique_id=1520696074]
+custom_minimum_size = Vector2(0, 512)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_slxxm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1146515086]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Tap" type="HBoxContainer" parent="VBoxContainer" unique_id=1613897651]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="1" type="TextureRect" parent="VBoxContainer/Tap" unique_id=653457047]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="2" type="TextureRect" parent="VBoxContainer/Tap" unique_id=1537140832]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Flick" type="HBoxContainer" parent="VBoxContainer" unique_id=1033942795]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="1" type="TextureRect" parent="VBoxContainer/Flick" unique_id=886317725]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="2" type="TextureRect" parent="VBoxContainer/Flick" unique_id=1457081505]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Drag" type="HBoxContainer" parent="VBoxContainer" unique_id=1222781231]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="1" type="TextureRect" parent="VBoxContainer/Drag" unique_id=1989462581]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="2" type="TextureRect" parent="VBoxContainer/Drag" unique_id=425696133]
+layout_mode = 2
+size_flags_horizontal = 3
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hold" type="HBoxContainer" parent="." unique_id=272917930]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="1" type="VBoxContainer" parent="Hold" unique_id=46849872]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="End" type="TextureRect" parent="Hold/1" unique_id=1114789314]
+layout_mode = 2
+expand_mode = 5
+
+[node name="Body" type="TextureRect" parent="Hold/1" unique_id=413940601]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="Head" type="TextureRect" parent="Hold/1" unique_id=922716723]
+layout_mode = 2
+expand_mode = 5
+
+[node name="2" type="VBoxContainer" parent="Hold" unique_id=1135586752]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="End" type="TextureRect" parent="Hold/2" unique_id=1905908381]
+layout_mode = 2
+expand_mode = 5
+
+[node name="Body" type="TextureRect" parent="Hold/2" unique_id=1598598686]
+layout_mode = 2
+size_flags_vertical = 3
+expand_mode = 1
+
+[node name="Head" type="TextureRect" parent="Hold/2" unique_id=964547980]
+layout_mode = 2
+expand_mode = 5
+
+[node name="Text" type="VBoxContainer" parent="." unique_id=1456797650]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Text" unique_id=1094879060]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Text" unique_id=1503965411]
+layout_mode = 2
+alignment = 2
+
+[node name="Check" type="PanelContainer" parent="Text/HBoxContainer" unique_id=849050751]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("2_lkge1")
+
+[node name="TextureRect" type="TextureRect" parent="Text/HBoxContainer/Check" unique_id=647128542]
+layout_mode = 2
+texture = ExtResource("2_ogs51")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Delete" type="PanelContainer" parent="Text/HBoxContainer" unique_id=268391096]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+script = ExtResource("4_2kaph")
+
+[node name="TextureRect" type="TextureRect" parent="Text/HBoxContainer/Delete" unique_id=1233479402]
+layout_mode = 2
+texture = ExtResource("3_5n2vx")
+expand_mode = 1
+stretch_mode = 5

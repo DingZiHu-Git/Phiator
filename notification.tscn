@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ds6wskjhpw853"]
+
+[ext_resource type="StyleBox" uid="uid://dk57i6p10h70c" path="res://window.tres" id="1_pfrp7"]
+[ext_resource type="Script" uid="uid://c5fd8jc6cjuhl" path="res://notification.gd" id="2_3w3rg"]
+
+[node name="Notification" type="PanelContainer" unique_id=561549503]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 33.0
+grow_horizontal = 2
+theme_override_styles/panel = ExtResource("1_pfrp7")
+script = ExtResource("2_3w3rg")
+
+[node name="Label" type="Label" parent="." unique_id=1737134071]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+visible_characters_behavior = 1

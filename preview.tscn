@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://b8hk0hrni2seg"]
+
+[ext_resource type="Script" uid="uid://cgrxd45b3mrs6" path="res://preview.gd" id="1_1esjh"]
+[ext_resource type="Shader" uid="uid://dd0dyup5c7bf2" path="res://editor.gdshader" id="1_a13yc"]
+[ext_resource type="PackedScene" uid="uid://cv5gaapfms86i" path="res://player.tscn" id="2_1esjh"]
+[ext_resource type="Texture2D" uid="uid://b3vg7ng244qcw" path="res://icon.png" id="2_v266o"]
+[ext_resource type="Texture2D" uid="uid://uhm6gu40s61k" path="res://textures/close.png" id="4_gmcfr"]
+[ext_resource type="Script" uid="uid://b2mgkl5u88vsr" path="res://preview_quit.gd" id="5_bkyto"]
+[ext_resource type="Texture2D" uid="uid://cs7ggixttk5pk" path="res://textures/refresh.png" id="5_s6vga"]
+[ext_resource type="Texture2D" uid="uid://bw3gfhbvgqdm4" path="res://textures/resume.png" id="6_bkyto"]
+[ext_resource type="Script" uid="uid://cw7borugews1x" path="res://preview_retry.gd" id="7_ma032"]
+[ext_resource type="Script" uid="uid://ckps3usffw8w6" path="res://preview_resume.gd" id="9_ma032"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g7b7a"]
+shader = ExtResource("1_a13yc")
+shader_parameter/blur_amount = 5.0000003325
+shader_parameter/mix_amount = 0.0
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6urkv"]
+texture = ExtResource("4_gmcfr")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n3s36"]
+texture = ExtResource("5_s6vga")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1esjh"]
+texture = ExtResource("6_bkyto")
+
+[node name="Preview" type="AspectRatioContainer" unique_id=118803412]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+ratio = 1.7778
+script = ExtResource("1_1esjh")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=430548379]
+z_index = -4096
+layout_mode = 2
+texture = ExtResource("2_v266o")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect" unique_id=761310394]
+material = SubResource("ShaderMaterial_g7b7a")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Player" parent="." unique_id=1642397262 instance=ExtResource("2_1esjh")]
+layout_mode = 2
+
+[node name="Pause" type="PanelContainer" parent="." unique_id=187009254]
+visible = false
+z_index = 4096
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Pause" unique_id=702891633]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Pause/CenterContainer" unique_id=1577277719]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Quit" type="Panel" parent="Pause/CenterContainer/HBoxContainer" unique_id=1699256130]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6urkv")
+script = ExtResource("5_bkyto")
+
+[node name="Retry" type="Panel" parent="Pause/CenterContainer/HBoxContainer" unique_id=870412711]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_n3s36")
+script = ExtResource("7_ma032")
+
+[node name="Resume" type="Panel" parent="Pause/CenterContainer/HBoxContainer" unique_id=1499695818]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1esjh")
+script = ExtResource("9_ma032")
+
+[connection signal="resized" from="." to="." method="_on_resized"]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://c44i0w85pp8kj"]
+
+[ext_resource type="Script" uid="uid://bajdl3jjg16nd" path="res://event.gd" id="2_ruury"]
+
+[sub_resource type="Gradient" id="Gradient_wi3ac"]
+colors = PackedColorArray(1, 1, 0, 0.6666667, 0, 1, 1, 0.6666667)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ned53"]
+gradient = SubResource("Gradient_wi3ac")
+fill_to = Vector2(0, 1)
+
+[node name="Event" type="TextureRect" unique_id=1199999353]
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -1)
+offset_transform_visual_only = false
+texture = SubResource("GradientTexture2D_ned53")
+expand_mode = 1
+script = ExtResource("2_ruury")

@@ -1,0 +1,869 @@
+[gd_scene format=3 uid="uid://daque2s7tv5tk"]
+
+[ext_resource type="Script" uid="uid://kax7qyypwbpr" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="Theme" uid="uid://olmpbjqrcyj7" path="res://main.tres" id="1_kq58d"]
+[ext_resource type="Script" uid="uid://fchtbnhu68w2" path="res://main_create.gd" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://db2xqd5jc56ck" path="res://chart_list.gd" id="2_5vw27"]
+[ext_resource type="Texture2D" uid="uid://b3vg7ng244qcw" path="res://icon.png" id="3_4k2k6"]
+[ext_resource type="StyleBox" uid="uid://cuw5ltcubw377" path="res://button_stylebox.tres" id="3_272bh"]
+[ext_resource type="Shader" uid="uid://dd0dyup5c7bf2" path="res://editor.gdshader" id="4_4k2k6"]
+[ext_resource type="StyleBox" uid="uid://c7y6qoj8xsls7" path="res://cancel_stylebox.tres" id="4_7mycd"]
+[ext_resource type="Script" uid="uid://bcveg78a30tlm" path="res://main_import.gd" id="5_074og"]
+[ext_resource type="Texture2D" uid="uid://d2at2tuc6suvh" path="res://textures/import.png" id="5_d13ii"]
+[ext_resource type="StyleBox" uid="uid://cvomuwmy6gjgv" path="res://ok_stylebox.tres" id="6_272bh"]
+[ext_resource type="Script" uid="uid://bnqr3wrqhnsdy" path="res://main_refresh.gd" id="6_w48qg"]
+[ext_resource type="Texture2D" uid="uid://bpf2wui0ajy86" path="res://textures/settings.png" id="7_1u8w0"]
+[ext_resource type="Script" uid="uid://cvaxt2f68kden" path="res://chart_info_ok.gd" id="7_272bh"]
+[ext_resource type="Script" uid="uid://bgld1g1tep1yj" path="res://main_settings.gd" id="8_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://destrn6v7nlcu" path="res://textures/folder_add.png" id="8_82xsv"]
+[ext_resource type="StyleBox" uid="uid://cvk68qh4le38n" path="res://line_edit_stylebox.tres" id="8_dg77c"]
+[ext_resource type="Texture2D" uid="uid://cs7ggixttk5pk" path="res://textures/refresh.png" id="9_0odxb"]
+[ext_resource type="StyleBox" uid="uid://cd6p3rl0w6v6d" path="res://empty_stylebox.tres" id="10_w48qg"]
+[ext_resource type="Script" uid="uid://5ju8e4731e0a" path="res://main_log.gd" id="11_a6jrf"]
+[ext_resource type="PackedScene" uid="uid://b7c2mqqu7e70h" path="res://settings.tscn" id="11_lswn8"]
+[ext_resource type="Texture2D" uid="uid://ctagmsmo7mqxc" path="res://textures/log_export.png" id="11_xuqvo"]
+[ext_resource type="Script" uid="uid://6k041vkdq6ql" path="res://window_cancel.gd" id="13_2cqfq"]
+[ext_resource type="PackedScene" uid="uid://dar2emqambvuu" path="res://help.tscn" id="14_qsp4k"]
+[ext_resource type="Script" uid="uid://cyw0cffud06nv" path="res://export_phiator.gd" id="15_vivmo"]
+[ext_resource type="Script" uid="uid://cjdw6ftlk8g8i" path="res://export_rpe.gd" id="16_2cqfq"]
+[ext_resource type="Script" uid="uid://c4xudwg7cgpra" path="res://export_ok.gd" id="17_yaehf"]
+[ext_resource type="Script" uid="uid://eka6wgqshujk" path="res://delete_ok.gd" id="19_cegan"]
+[ext_resource type="Script" uid="uid://b1d2er3iavmtu" path="res://warning_ok.gd" id="20_getpj"]
+[ext_resource type="Script" uid="uid://ch7fee4m76o51" path="res://main_export_path.gd" id="21_1u8w0"]
+[ext_resource type="Script" uid="uid://cexc7f3xd3nja" path="res://main_check_retry.gd" id="25_lswn8"]
+[ext_resource type="Script" uid="uid://0xa033a85ht2" path="res://main_check_copy.gd" id="26_lswn8"]
+[ext_resource type="Script" uid="uid://b3ekxuliwb4c5" path="res://create_ok.gd" id="31_0rl1p"]
+[ext_resource type="Script" uid="uid://cbq4b4hr0o358" path="res://tip.gd" id="32_htxhm"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pfrp7"]
+shader = ExtResource("4_4k2k6")
+shader_parameter/blur_amount = 2.50000021375
+shader_parameter/mix_amount = 0.50000002375
+shader_parameter/color_over = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d13ii"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lswn8"]
+texture = ExtResource("8_82xsv")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a6jrf"]
+texture = ExtResource("5_d13ii")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xuqvo"]
+texture = ExtResource("7_1u8w0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qsp4k"]
+texture = ExtResource("9_0odxb")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kq58d"]
+texture = ExtResource("11_xuqvo")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2yge"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1bvp3"]
+bg_color = Color(0, 0, 0, 0.5019608)
+border_width_left = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[node name="Main" type="MarginContainer" unique_id=753051624]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Main" type="AspectRatioContainer" parent="." unique_id=1128476472]
+clip_contents = true
+layout_mode = 2
+theme = ExtResource("1_kq58d")
+ratio = 1.7778
+script = ExtResource("1_ig7tw")
+
+[node name="Illustration" type="TextureRect" parent="Main" unique_id=1015044844]
+z_index = -4096
+layout_mode = 2
+texture = ExtResource("3_4k2k6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Blur" type="ColorRect" parent="Main/Illustration" unique_id=935368560]
+material = SubResource("ShaderMaterial_pfrp7")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main" unique_id=1920233185]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Main/HBoxContainer" unique_id=1953544261]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Main/HBoxContainer/ScrollContainer" unique_id=231620052]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_right = 24
+
+[node name="ChartList" type="VBoxContainer" parent="Main/HBoxContainer/ScrollContainer/MarginContainer" unique_id=2026432842]
+layout_mode = 2
+theme_override_constants/separation = 4
+script = ExtResource("2_5vw27")
+
+[node name="Panel" type="Panel" parent="Main/HBoxContainer" unique_id=237644364]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d13ii")
+
+[node name="Operations" type="ScrollContainer" parent="Main/HBoxContainer" unique_id=877170328]
+custom_minimum_size = Vector2(152, 0)
+propagate_maximum_size = true
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/HBoxContainer/Operations" unique_id=1550461579]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Create" type="Panel" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=1761560585]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lswn8")
+script = ExtResource("2_0xm2m")
+
+[node name="CreateLabel" type="Label" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=813606054]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "create_chart"
+horizontal_alignment = 1
+
+[node name="Import" type="Panel" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=715346547]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_a6jrf")
+script = ExtResource("5_074og")
+
+[node name="ImportLabel" type="Label" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=748897224]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "import_chart"
+horizontal_alignment = 1
+
+[node name="Settings" type="Panel" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=1780163146]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_xuqvo")
+script = ExtResource("8_2cqfq")
+
+[node name="SettingsLabel" type="Label" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=318420527]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "app_settings"
+horizontal_alignment = 1
+
+[node name="Refresh" type="Panel" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=311466960]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qsp4k")
+script = ExtResource("6_w48qg")
+
+[node name="RefreshLabel" type="Label" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=19319296]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "refresh_list"
+horizontal_alignment = 1
+
+[node name="Export" type="Panel" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=1505428811]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kq58d")
+script = ExtResource("11_a6jrf")
+
+[node name="ExportLabel" type="Label" parent="Main/HBoxContainer/Operations/VBoxContainer" unique_id=1386104313]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_constants/outline_size = 4
+text = "export_log"
+horizontal_alignment = 1
+
+[node name="Settings" parent="Main" unique_id=1489732865 instance=ExtResource("11_lswn8")]
+visible = false
+layout_mode = 2
+
+[node name="Help" parent="Main" unique_id=977273784 instance=ExtResource("14_qsp4k")]
+visible = false
+layout_mode = 2
+
+[node name="ChartInfo" type="MarginContainer" parent="Main" unique_id=645668427]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/ChartInfo" unique_id=1629609240]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="Main/ChartInfo/VBoxContainer" unique_id=357985481]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2yge")
+
+[node name="Label" type="Label" parent="Main/ChartInfo/VBoxContainer/Title" unique_id=1655573273]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "chart_info"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Main/ChartInfo/VBoxContainer" unique_id=158013541]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/ChartInfo/VBoxContainer/PanelContainer" unique_id=2070193824]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1355683543]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Labels" type="VBoxContainer" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=933392674]
+layout_mode = 2
+
+[node name="Chart" type="Label" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Labels" unique_id=939861914]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "chart_chart"
+vertical_alignment = 1
+
+[node name="Artist" type="Label" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Labels" unique_id=277637806]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "chart_artist"
+vertical_alignment = 1
+
+[node name="Illustrator" type="Label" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Labels" unique_id=393238080]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "chart_illustrator"
+vertical_alignment = 1
+
+[node name="Version" type="Label" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Labels" unique_id=838066833]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "chart_version"
+vertical_alignment = 1
+
+[node name="Author" type="Label" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Labels" unique_id=1557082107]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "chart_author"
+vertical_alignment = 1
+
+[node name="Path" type="Label" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Labels" unique_id=359771757]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "chart_path"
+vertical_alignment = 1
+
+[node name="LineEdits" type="VBoxContainer" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=822201328]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Chart" type="LineEdit" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/LineEdits" unique_id=199278787]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("8_dg77c")
+theme_override_styles/focus = ExtResource("10_w48qg")
+alignment = 1
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Artist" type="LineEdit" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/LineEdits" unique_id=1526384712]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("8_dg77c")
+theme_override_styles/focus = ExtResource("10_w48qg")
+alignment = 1
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Illustrator" type="LineEdit" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/LineEdits" unique_id=550512160]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("8_dg77c")
+theme_override_styles/focus = ExtResource("10_w48qg")
+alignment = 1
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Version" type="LineEdit" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/LineEdits" unique_id=671279363]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("8_dg77c")
+theme_override_styles/focus = ExtResource("10_w48qg")
+text = "SP Lv.?"
+alignment = 1
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Author" type="LineEdit" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/LineEdits" unique_id=583432194]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("8_dg77c")
+theme_override_styles/focus = ExtResource("10_w48qg")
+alignment = 1
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Path" type="LineEdit" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/LineEdits" unique_id=2079441769]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+theme_override_styles/normal = ExtResource("8_dg77c")
+theme_override_styles/focus = ExtResource("10_w48qg")
+alignment = 1
+virtual_keyboard_type = 2
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="ConfirmHBox" type="HBoxContainer" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer" unique_id=188515827]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Cancel" type="PanelContainer" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1339092184]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("4_7mycd")
+script = ExtResource("13_2cqfq")
+
+[node name="Label" type="Label" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Cancel" unique_id=1057243560]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "cancel"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1990004852]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Ok" type="PanelContainer" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1837635423]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("6_272bh")
+script = ExtResource("7_272bh")
+
+[node name="Label" type="Label" parent="Main/ChartInfo/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Ok" unique_id=686976597]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "ok"
+horizontal_alignment = 1
+
+[node name="Export" type="MarginContainer" parent="Main" unique_id=256036206]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 64
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 64
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Export" unique_id=1420497391]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="Main/Export/VBoxContainer" unique_id=1739038101]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2yge")
+
+[node name="Label" type="Label" parent="Main/Export/VBoxContainer/Title" unique_id=396774562]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "export_chart"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Main/Export/VBoxContainer" unique_id=882225778]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Export/VBoxContainer/PanelContainer" unique_id=994034279]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer" unique_id=2005716998]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Labels" type="VBoxContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=2037342631]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Format" type="Label" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Labels" unique_id=1615436361]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "export_format"
+vertical_alignment = 1
+
+[node name="Path" type="Label" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Labels" unique_id=94650565]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "export_path"
+vertical_alignment = 1
+
+[node name="Contents" type="VBoxContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer" unique_id=1325795387]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Format" type="HBoxContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Contents" unique_id=1483465425]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Phiator" type="PanelContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Contents/Format" unique_id=2139119097]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_272bh")
+script = ExtResource("15_vivmo")
+
+[node name="Label" type="Label" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Contents/Format/Phiator" unique_id=481620169]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "export_phiator"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RPE" type="PanelContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Contents/Format" unique_id=1091507751]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_272bh")
+script = ExtResource("16_2cqfq")
+
+[node name="Label" type="Label" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Contents/Format/RPE" unique_id=1031137675]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "export_rpe"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Path" type="PanelContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Contents" unique_id=1721867204]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_272bh")
+script = ExtResource("21_1u8w0")
+
+[node name="Label" type="Label" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/HBoxContainer/Contents/Path" unique_id=840101278]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfirmHBox" type="HBoxContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer" unique_id=2086016899]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Cancel" type="PanelContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=365813755]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("4_7mycd")
+script = ExtResource("13_2cqfq")
+
+[node name="Label" type="Label" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Cancel" unique_id=47329279]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "cancel"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=82487981]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Ok" type="PanelContainer" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=692946944]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("6_272bh")
+script = ExtResource("17_yaehf")
+
+[node name="Label" type="Label" parent="Main/Export/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Ok" unique_id=1828432808]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "ok"
+horizontal_alignment = 1
+
+[node name="Delete" type="MarginContainer" parent="Main" unique_id=1934355899]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Delete" unique_id=154189163]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="Main/Delete/VBoxContainer" unique_id=1058610051]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2yge")
+
+[node name="Label" type="Label" parent="Main/Delete/VBoxContainer/Title" unique_id=1697502706]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "warning"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Main/Delete/VBoxContainer" unique_id=1953046306]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Delete/VBoxContainer/PanelContainer" unique_id=451164514]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Main/Delete/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1793481554]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "delete_chart_confirm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ConfirmHBox" type="HBoxContainer" parent="Main/Delete/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1906847594]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Cancel" type="PanelContainer" parent="Main/Delete/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1263526474]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("4_7mycd")
+script = ExtResource("13_2cqfq")
+
+[node name="Label" type="Label" parent="Main/Delete/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Cancel" unique_id=1000102183]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "cancel"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Main/Delete/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=211622778]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Ok" type="PanelContainer" parent="Main/Delete/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1794626569]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("6_272bh")
+script = ExtResource("19_cegan")
+
+[node name="Label" type="Label" parent="Main/Delete/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Ok" unique_id=982028906]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "ok"
+horizontal_alignment = 1
+
+[node name="Warning" type="MarginContainer" parent="Main" unique_id=1342459258]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Warning" unique_id=1166844993]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="Main/Warning/VBoxContainer" unique_id=681107073]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2yge")
+
+[node name="Label" type="Label" parent="Main/Warning/VBoxContainer/Title" unique_id=2034826180]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "warning"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Main/Warning/VBoxContainer" unique_id=714302866]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Warning/VBoxContainer/PanelContainer" unique_id=1484598790]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Main/Warning/VBoxContainer/PanelContainer/VBoxContainer" unique_id=792039157]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "last_edit_version_confirm"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ConfirmHBox" type="HBoxContainer" parent="Main/Warning/VBoxContainer/PanelContainer/VBoxContainer" unique_id=2081754254]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Cancel" type="PanelContainer" parent="Main/Warning/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=343229043]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("4_7mycd")
+script = ExtResource("13_2cqfq")
+
+[node name="Label" type="Label" parent="Main/Warning/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Cancel" unique_id=557036518]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "cancel"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Main/Warning/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1014206818]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Ok" type="PanelContainer" parent="Main/Warning/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=98164082]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("6_272bh")
+script = ExtResource("20_getpj")
+
+[node name="Label" type="Label" parent="Main/Warning/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Ok" unique_id=539930378]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "ok"
+horizontal_alignment = 1
+
+[node name="Create" type="MarginContainer" parent="Main" unique_id=1655056060]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Create" unique_id=459920159]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="Main/Create/VBoxContainer" unique_id=82832396]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2yge")
+
+[node name="Label" type="Label" parent="Main/Create/VBoxContainer/Title" unique_id=42461731]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "create_chart"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Main/Create/VBoxContainer" unique_id=1335707714]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Create/VBoxContainer/PanelContainer" unique_id=1887542561]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Main/Create/VBoxContainer/PanelContainer/VBoxContainer" unique_id=435151544]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "create_warning"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ConfirmHBox" type="HBoxContainer" parent="Main/Create/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1181302662]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Cancel" type="PanelContainer" parent="Main/Create/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1607658594]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("4_7mycd")
+script = ExtResource("13_2cqfq")
+
+[node name="Label" type="Label" parent="Main/Create/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Cancel" unique_id=1449475827]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "cancel"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Main/Create/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1951587532]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Ok" type="PanelContainer" parent="Main/Create/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=196260229]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("6_272bh")
+script = ExtResource("31_0rl1p")
+
+[node name="Label" type="Label" parent="Main/Create/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Ok" unique_id=187222395]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "ok"
+horizontal_alignment = 1
+
+[node name="Check" type="MarginContainer" parent="Main" unique_id=447042873]
+layout_mode = 2
+theme_override_constants/margin_left = 128
+theme_override_constants/margin_top = 128
+theme_override_constants/margin_right = 128
+theme_override_constants/margin_bottom = 128
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Check" unique_id=1959303720]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="Main/Check/VBoxContainer" unique_id=1015670357]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h2yge")
+
+[node name="Label" type="Label" parent="Main/Check/VBoxContainer/Title" unique_id=1604396298]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "authentication"
+horizontal_alignment = 1
+
+[node name="PanelContainer" type="PanelContainer" parent="Main/Check/VBoxContainer" unique_id=1226875295]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Main/Check/VBoxContainer/PanelContainer" unique_id=1469320896]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="Main/Check/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1105846935]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "authentication_confirm"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ConfirmHBox" type="HBoxContainer" parent="Main/Check/VBoxContainer/PanelContainer/VBoxContainer" unique_id=1135384806]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Cancel" type="PanelContainer" parent="Main/Check/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1723818776]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("4_7mycd")
+script = ExtResource("25_lswn8")
+
+[node name="Label" type="Label" parent="Main/Check/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Cancel" unique_id=745770191]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "cancel"
+horizontal_alignment = 1
+
+[node name="ColorRect" type="ColorRect" parent="Main/Check/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1972237399]
+custom_minimum_size = Vector2(4, 0)
+layout_mode = 2
+color = Color(0.8, 0.8, 0.8, 1)
+
+[node name="Ok" type="PanelContainer" parent="Main/Check/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox" unique_id=1973660563]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("6_272bh")
+script = ExtResource("26_lswn8")
+
+[node name="Label" type="Label" parent="Main/Check/VBoxContainer/PanelContainer/VBoxContainer/ConfirmHBox/Ok" unique_id=1468170915]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 48
+text = "ok"
+horizontal_alignment = 1
+
+[node name="Notifications" type="MarginContainer" parent="Main" unique_id=1982940110]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 256
+theme_override_constants/margin_right = 256
+
+[node name="Control" type="Control" parent="Main/Notifications" unique_id=643258873]
+layout_mode = 2
+
+[node name="Info" type="HBoxContainer" parent="Main" unique_id=821418757]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 8
+
+[node name="FPS" type="Label" parent="Main/Info" unique_id=554031548]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_constants/outline_size = 4
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tip" type="Label" parent="Main/Info" unique_id=1522619460]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+mouse_filter = 0
+theme_override_constants/outline_size = 4
+horizontal_alignment = 2
+vertical_alignment = 1
+script = ExtResource("32_htxhm")
+
+[node name="Timer" type="Timer" parent="Main/Info/Tip" unique_id=1422690430]
+wait_time = 10.0
+
+[connection signal="resized" from="Main" to="Main" method="_on_resized"]
+[connection signal="timeout" from="Main/Info/Tip/Timer" to="Main/Info/Tip" method="rand"]

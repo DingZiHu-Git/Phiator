@@ -1,0 +1,67 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Phiator"
+config/version="0.3.4"
+run/main_scene="res://main.tscn"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.7", "Mobile")
+run/low_processor_mode=true
+config/icon="uid://b3vg7ng244qcw"
+config/test=""
+
+[autoload]
+
+Global="*res://global.gd"
+Tools="*uid://d3bvsm8orxtkh"
+ShareFile="*uid://bvmsx7ebep2e4"
+
+[debug]
+
+settings/gdscript/always_track_call_stacks=true
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_share_file/plugin.cfg")
+
+[gui]
+
+common/snap_controls_to_pixels=false
+theme/custom_font="uid://c4ikc7wj7qhe7"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://texts.en.translation", "res://texts.zh.translation")
+
+[physics]
+
+2d/run_on_separate_thread=true
+3d/run_on_separate_thread=true
+
+[rendering]
+
+occlusion_culling/bvh_build_quality=0
+occlusion_culling/jitter_projection=false
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+limits/time/time_rollover_secs=32.0
+shading/overrides/force_vertex_shading=true

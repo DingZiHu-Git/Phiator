@@ -1,0 +1,35 @@
+[gd_resource type="Theme" format=3 uid="uid://olmpbjqrcyj7"]
+
+[ext_resource type="Texture2D" uid="uid://hjtvddfxxtqy" path="res://grabber.tres" id="1_oblph"]
+[ext_resource type="StyleBox" uid="uid://dhx4oswlus87q" path="res://grabber_area.tres" id="2_v11j8"]
+[ext_resource type="StyleBox" uid="uid://cd6p3rl0w6v6d" path="res://empty_stylebox.tres" id="3_5i7ek"]
+[ext_resource type="StyleBox" uid="uid://cuw5ltcubw377" path="res://button_stylebox.tres" id="4_uxqhr"]
+[ext_resource type="StyleBox" uid="uid://cwa3fjim7dr0t" path="res://button_pressed_stylebox.tres" id="5_tcxlh"]
+
+[resource]
+HSlider/icons/grabber_highlight = ExtResource("1_oblph")
+HSlider/styles/grabber_area_highlight = ExtResource("2_v11j8")
+LineEdit/constants/minimum_character_width = 2
+LineEdit/font_sizes/font_size = 24
+LineEdit/styles/focus = ExtResource("3_5i7ek")
+OptionButton/colors/font_color = Color(1, 1, 1, 1)
+OptionButton/colors/font_focus_color = Color(1, 1, 1, 1)
+OptionButton/colors/font_hover_color = Color(1, 1, 1, 1)
+OptionButton/colors/font_outline_color = Color(0, 0, 0, 0)
+OptionButton/constants/h_separation = 0
+OptionButton/font_sizes/font_size = 24
+OptionButton/styles/focus = ExtResource("3_5i7ek")
+OptionButton/styles/hover = ExtResource("4_uxqhr")
+OptionButton/styles/hover_mirrored = ExtResource("4_uxqhr")
+OptionButton/styles/normal = ExtResource("4_uxqhr")
+OptionButton/styles/normal_mirrored = ExtResource("4_uxqhr")
+OptionButton/styles/pressed = ExtResource("5_tcxlh")
+OptionButton/styles/pressed_mirrored = ExtResource("5_tcxlh")
+PopupMenu/colors/font_color = Color(1, 1, 1, 1)
+PopupMenu/colors/font_hover_color = Color(1, 1, 1, 1)
+PopupMenu/colors/font_outline_color = Color(0, 0, 0, 0)
+PopupMenu/constants/h_separation = 0
+PopupMenu/constants/icon_max_width = 48
+PopupMenu/constants/v_separation = 8
+PopupMenu/font_sizes/font_size = 24
+SpinBox/constants/buttons_width = 32

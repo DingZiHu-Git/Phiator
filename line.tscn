@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://cqndt37ykjvae"]
+
+[ext_resource type="Texture2D" uid="uid://dccxx5it6irs7" path="res://textures/line.png" id="1_nt5om"]
+[ext_resource type="Script" uid="uid://bh66761fbt2r0" path="res://line.gd" id="2_nt5om"]
+
+[node name="Line" type="TextureRect" unique_id=1753343473]
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -0.5)
+offset_transform_visual_only = false
+texture = ExtResource("1_nt5om")
+expand_mode = 1
+script = ExtResource("2_nt5om")
+
+[node name="Label" type="Label" parent="." unique_id=574890703]
+z_index = 513
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -12.5
+offset_right = 8.0
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(0, 0.5)
+offset_transform_visual_only = false
+theme_override_font_sizes/font_size = 24
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

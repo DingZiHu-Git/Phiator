@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://kx6g8amcqnyp"]
+
+[ext_resource type="Script" uid="uid://bdcueiw07wyne" path="res://click.gd" id="2_cjuj7"]
+
+[node name="Flick" type="TextureRect" unique_id=1857047762]
+z_index = 1024
+offset_transform_enabled = true
+offset_transform_position_ratio = Vector2(-0.5, -0.5)
+offset_transform_visual_only = false
+expand_mode = 1
+script = ExtResource("2_cjuj7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=624101428]

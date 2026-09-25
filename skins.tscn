@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://et7nlejjxjmw"]
+
+[ext_resource type="StyleBox" uid="uid://bdwpqbf2e1s5r" path="res://window_fullscreen.tres" id="1_5xf5c"]
+[ext_resource type="Texture2D" uid="uid://uhm6gu40s61k" path="res://textures/close.png" id="2_u04x5"]
+[ext_resource type="Script" uid="uid://o05oto5tiyar" path="res://skins.gd" id="2_w263f"]
+[ext_resource type="Script" uid="uid://c83frh5joauva" path="res://window_close.gd" id="3_qupw3"]
+[ext_resource type="StyleBox" uid="uid://cuw5ltcubw377" path="res://button_stylebox.tres" id="4_crgjt"]
+[ext_resource type="Script" uid="uid://vf8abdhlajps" path="res://skin_import.gd" id="5_crgjt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_crgjt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ruks"]
+texture = ExtResource("2_u04x5")
+
+[node name="Skins" type="PanelContainer" unique_id=1811706989]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = ExtResource("1_5xf5c")
+script = ExtResource("2_w263f")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=976118122]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="PanelContainer" parent="VBoxContainer" unique_id=825066635]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_crgjt")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Title" unique_id=614214659]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/Title/HBoxContainer" unique_id=1379659975]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 64
+text = "skins"
+
+[node name="Panel" type="Panel" parent="VBoxContainer/Title/HBoxContainer" unique_id=388476737]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7ruks")
+script = ExtResource("3_qupw3")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer" unique_id=346360422]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer" unique_id=1922392238]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Import" type="PanelContainer" parent="VBoxContainer" unique_id=701869450]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("4_crgjt")
+script = ExtResource("5_crgjt")
+
+[node name="Label" type="Label" parent="VBoxContainer/Import" unique_id=1342825660]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "import_skin"
+horizontal_alignment = 1
+vertical_alignment = 1

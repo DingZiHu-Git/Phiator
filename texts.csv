@@ -1,0 +1,226 @@
+﻿keys,en,zh
+above,Above line,在线上方
+add,Add,添加
+add_event,Add event,添加事件
+add_line,Add line,添加判定线
+add_note,Add note,添加音符
+alpha,Alpha,不透明度
+app_settings,App settings,应用设置
+apply,Apply,应用
+authentication,Announcement,声明
+authentication_confirm,"Phiator is a Phigros fanmade chart editor. It has no connection with Phigros and Pigeon Games Company!\nIf you already know, please click the Ok button. Otherwise, the app will quit.",Phiator是一款Phigros玩家自制谱面编辑器。其与Phigros及鸽游公司没有任何关联！\n如果你已知晓，请点击确定按钮。否则，APP将会自动退出。
+auto_save_disabled,"Because you set the auto save interval below 30s, the auto save has been disabled.",由于你将自动保存间隔设置为低于30s，自动保存已被禁用。
+auto_save_done,Chart auto saved.,谱面已自动保存。
+base_event_warn,Detected some base events doesn't exist. Will put default events as base events.,检测到部分垫底事件不存在。将会放置默认事件作为垫底事件。
+beat,Beat,拍子
+bezier,Bezier:,贝塞尔：
+bpm_factor,BPM factor,BPM倍率
+bpm_list,BPM list,BPM列表
+bpm_one,There must be one item in BPM list at least!,BPM列表中至少需要有一个项目！
+cancel,Cancel,取消
+chart_artist,Artist: ,曲师：
+chart_author,Author: ,谱师：
+chart_chart,Chart name: ,谱面名称：
+chart_illustration,Illustration: ,曲绘：
+chart_illustrator,Illustrator: ,曲绘画师：
+chart_info,Modify info,编辑谱面信息
+chart_last_edit,Last edit version: ,上次编辑版本：
+chart_level,Level: ,难度：
+chart_music,Music: ,音乐：
+chart_offset,Chart offset: ,谱面偏移：
+chart_path,Chart path: ,谱面目录：
+chart_text,Chart name,谱面名称
+clear_error,Clear error,清除错误项目
+clear_error_msg,Cleared {note} error note(s) and {event} error event(s).,已清除{note}个错误音符和{event}个错误事件。
+clear_selection,Clear selection,清空选中项目
+combo_number,Combo number,连击数
+combo_text,Combo text,连击文本
+copy,Copy,复制
+copy_chart,Copy chart,复制谱面
+copying,"Copying... (If it spends a long time, try reducing the count of selected notes and events)",正在复制……（如果耗时很长，请尝试减少选中音符和事件的数量）
+cover,Line cover,判定线覆盖
+create_chart,Create chart,创建谱面
+create_warning,"After you press the ""Ok"" button, the file selector will pop up. You should select a music file.The format of the music file can only be MP3, OGG or WAV. You must confirm that the extension of the file and its true format is the same, or the file may not be loaded successfully.",在你按下“确认”按钮之后，文件选择器将会弹出。你需要选择一个音乐文件。音乐文件的格式只能是MP3、OGG或WAV。你必须确保文件的扩展名和它的真实格式一致，否则文件可能无法被成功加载。
+cut,Cut,剪切
+cutting,"Cutting... (If it spends a long time, give up all modifies now and restart the editor)",正在剪切……（如果耗时很长，请立即放弃所有修改并重启编辑器）
+default,Default,默认
+delete,Delete,删除
+delete_chart,Delete chart,删除谱面
+delete_chart_confirm,Are you sure to delete this chart? The chart will disappear forever!,你确定要删除这张谱面吗？这张谱面将会永远消失！
+delete_event,Delete event,删除事件
+delete_line,Delete line,删除判定线
+delete_line_confirm,Are you sure to delete this line?,你确定要删除这条判定线吗？
+delete_note,Delete note,删除音符
+done,Done.,完成。
+ease,Ease type: ,过渡类型：
+edit_chart,Edit chart,编辑谱面
+event,Event,事件
+event_layer,Event layer,事件层
+export_chart,Export chart,导出谱面
+export_data,Export data,导出数据
+export_format,Chart format: ,谱面格式：
+export_log,Export log,导出日志
+export_path,Export path: ,导出谱面路径：
+export_phiator,Phiator format,Phiator格式
+export_rpe,Re:PhiEdit format,Re:PhiEdit格式
+fake,Fake note: ,假音符：
+father,Father: ,父线：
+function_not_finished,The function is not finished...,该功能还没做完……
+h_lines,H lines,横线数量
+h_lines_interval,H lines interval,横线间距
+help,Help,帮助
+help_msg,Select an item to check for help.,选择一个项目查看帮助。
+help_event,Events and event layers,事件和事件层
+help_event_msg,"Events are the soul of a Phigros chart. All types of events make judge line appear/disappear, move, rotate and so on.\n\nCurrently, there are 10 kinds of events:\n\n\tAlpha: They control the appearance and disappearance of the judge line.\n\tRotate: Literally, they control the rotation of the judge line.\n\tSpeed: They control the falling speed of all the notes on the judge line.\n\tX and Y: They control the movement of the judge line.\n\n\tColor: They control the color of the judge line.\n\tIncline: Useless currently.\n\tText: They will make the judge line disappear and replace it with a text you input. (This event isn't available in the current version)\n\tScaleX and ScaleY: They control the scale of the judge line.\n\nEvent layers can make you put more than one event each event type at the same time. You can put normal events(The first 5 types of events above) in the first 4 event layers and extra events(The last 5 types of events above) in the last event layer.Obviously, that means the extra events DONOT support multiple event layers.\n\nNotice: Every type of event in each event layer need a base event(like events at the bottom in the first event layer)! When you don't need a type of events in an event layer any more, you need to delete all events above the base event first, then you can delete the base event.",事件是一张Phigros谱面的灵魂。各种类型的事件让判定线显现/消失，移动，旋转，等等。\n\n目前共有10种类型的事件：\n\n\tAlpha（透明度事件）：控制判定线的显现和消失。\n\tRotate（旋转事件）：顾名思义，就是控制判定线的旋转。\n\tSpeed（速度事件）：控制这根判定线上的音符下落速度。\n\tX（X轴移动事件）和Y（Y轴移动事件）：控制判定线的移动。\n\n\tColor（颜色事件）: 控制判定线的颜色。\n\tIncline：目前没用。\n\tText（文字事件）：使判定线消失，并以你输入的文字代替。（当前版本尚未实现该事件）\n\tScaleX（X轴缩放事件）和ScaleY（Y轴缩放事件）：控制判定线的缩放。\n\n事件层可以让你在同一时间内放置多个同种类型的事件。你可以在前4个事件层内放置普通事件（上述的前5个事件类型），在最后一个事件层内放置EX事件（上述的后5个事件类型）。显然，这意味着EX事件不支持多事件层。\n\n注意：每个事件层中每种类型的事件都需要一个垫底事件（就像第一事件层中最底部的事件一样）！当你不再需要某个事件层中某类型的事件时，你需要先删除垫底事件之上的所有事件，然后你才可以删除垫底事件。
+help_event_values,Event values,事件值
+help_event_values_msg,"Here is the tutorial of how to set the value of all types of events:\n\n\tAlpha: From 0(transparent) to 1(opaque) and any negative value(hide the line and all notes on it)\n\tRotate: For example, 180 means the line turns 180 degrees\n\tSpeed: For example, 1 means the notes will move 1 screen height per second\n\tX: From -1(left of the screen) to 1(right of the screen)\n\tY: From -1(top of the screen) to 1(bottom of the screen)\n\n\tColor: Input the hex code of the color\n\tIncline: Useless currently\n\tText: Input the text you want to display\n\tScaleX and ScaleY: Input the scale factor of the texture you want",以下是如何设置各种类型事件的值的教程：\n\n\tAlpha（透明度事件）：从0（透明）到1（不透明）以及任意负值（隐藏判定线及其上全部音符）\n\tRotate（旋转事件）：例如，180意味着判定线旋转180度\n\tSpeed（速度事件）：例如，1意味着音符会在每秒内移动1个屏幕高\n\tX（横向移动事件）：从-1（屏幕左侧）到1（屏幕右侧）\n\tY（纵向移动事件）：从-1（屏幕上方）到1（屏幕下方）\n\n\tColor（颜色事件）：输入颜色的十六进制码\n\tIncline：目前没用\n\tText（文字事件）：输入你想要显示的文字\n\tScaleX（X轴缩放事件）和ScaleY（Y轴缩放事件）：输入你想要的纹理缩放比例
+help_father_line,Father line,父线
+help_father_line_msg,"You can set a father line for a judge line. When the father line value isn't -1, it will set the selected line as its father line. The coordinate system of the child line changes as the parent line changes.\n\nNo recursive parent relations!\nNo recursive parent relations!!\nNo recursive parent relations!!!",你可以为一条判定线设置一个父线。当父线的值不为-1时，它会设置选中的判定线为其父线。子线的坐标系会跟随父线变化。\n\n不许循环当爹！\n不许循环当爹！！\n不许循环当爹！！！
+help_notes_binding,Notes binding on line,音符绑线
+help_notes_binding_msg,"If you want to bind some notes on a judge line, you should use this method called ""Line binding"". It's core is to put a zero value speed event to make the notes stick to the judge line, then you can control the notes by controling the judge line. When you want to recycle the note, you need to make sure the move speed of the judge line is the same with other normal notes'.\nOf course, if you don't want to calculate event values, you can use fake notes to make them no need to hit. Just select a note and turn on the fake note switch, then click apply button.",如果你想在一条判定线上绑定一些音符，你需要使用这种叫做“绑线”的方法。它的核心是放置一个零值速度事件让音符黏在判定线上，然后你就可以通过控制判定线来控制音符。当你想要回收音符时，你需要确保判定线的移动速度和其他正常音符的移动速度一致。当然，如果你不想计算事件值，你可以使用假音符让它们无需击打。你只需要选择一个音符然后打开假音符开关，然后点击应用按钮。
+home,Back to home,返回主界面
+home_confirm,Are you sure to return to the homepage?,你确定要返回主界面吗？
+import,Import...,导入……
+import_chart,Import chart,导入谱面
+import_skin,Import skin,导入皮肤
+invalid_value,Operation failed: Invalid value.,操作失败：非法数值。
+last_edit_version_confirm,This chart is edited with newer Phiator version for the last time. Some unexpected errors may appear if using current Phiator version to edit the chart. Are you sure to continue?,这张谱面最后一次编辑使用的是更新版本的Phiator。如果使用当前版本的Phiator编辑该谱面，可能会出现一些不可预料的问题。确定要继续吗？
+level_text,Level text,难度文本
+line,Line,判定线
+line_id,Line ID,显示线号
+line_one,There must be one judge line at least!,至少需要有一条判定线！
+modify_event,Modify event,修改事件
+modify_note,Modify note,修改音符
+music_speed,Music speed,音乐速度
+network_error,Network error. Please check your network connection or change a VPN then retry.,网络错误。请检查你的网络连接或更换VPN后重试。
+no_available_content,No available content.,没有可用内容。
+no_latest_log,No valid latest log.,没有有效的最新日志。
+no_ui,No UI,无UI
+no_valid_clip,No valid clip data. Please ensure your clipboard was not modified.,没有有效的剪贴板数据。请确保你的剪贴板没有被修改。
+not_authenticated,"Your device is not authenticated. Please press ""Copy"" button to copy your Phiator pass code and then get touch with an auditor.",你的设备没有被认证。请按“复制”按钮复制你的Phiator通行证代码后与审核员取得联系。
+note,Note,音符
+note_event,Note\nEvent,音符\n事件
+off,Off,关
+ok,Ok,确定
+on,On,开
+paste,Paste,粘贴
+pause_button,Pause button,暂停按钮
+preview_chart,Preview chart,预览谱面
+progress_bar,Progress bar,进度条
+redo,Redo,重做
+redo_msg,Redo: {action},重做：{action}
+refresh_list,Refresh list,刷新列表
+restore_to_default,Restore to default,恢复默认设置
+retry,Retry,重试
+visible,Visible time: ,可视时间：
+rpaste,R Paste,反转粘贴
+save_chart,Save chart,保存谱面
+save_failed,Save chart failed. Please restart the app and send the latest log to the author of the app.,保存谱面失败。请重启APP然后将最新的日志发送给APP作者。
+save_properties,Save properties,保存配置
+score_text,Score text,分数文本
+select,Select,选择
+select_illustration,Select illustration,选择曲绘
+select_item,Please select an item!,请选择一个项目！
+select_music,Select music,选择音乐
+select_save_path,Select save path,选择保存路径
+settings_auto_save,Auto save interval: ,自动保存间隔：
+settings_background,Home background: ,主界面背景：
+settings_background_classic,Classic (Gray background),经典（灰色背景）
+settings_background_icon,Icon,图标
+settings_background_random,Random illustration from chart list,从谱面列表中随机曲绘
+settings_black,Background black: ,背景黑度：
+settings_blur,Blur background: ,虚化背景：
+settings_data,Data format: ,数据格式：
+settings_data_phiator,Phiator format,Phiator格式
+settings_data_rpe,Re:PhiEdit format,Re:PhiEdit格式
+settings_history,History size: ,历史记录长度：
+settings_interface_scale,Interface scale: ,界面缩放：
+settings_music,Music volume: ,音乐音量：
+settings_notification,Notification time: ,通知显示时长：
+settings_safe_zone,Safe zone: ,安全区：
+settings_se,SE volume: ,音效音量：
+skins,Skins,皮肤
+skins_author,Author: ,作者：
+skins_description,Description: ,描述：
+skins_name,Name: ,名称：
+speed,Speed rate: ,速度倍率：
+texture,Texture: ,纹理：
+texture_loaded_failed,Texture {texture} loaded failed.,纹理{texture}加载失败。
+tip1,"Each tip will be displayed for 10 seconds!",每个tip将会显示10秒！
+tip2,"Starting making charts (SHITTING)",开始写谱了（SHITTING）
+tip3,"X X XXX",X X XXX
+tip4,"Please subscribe DZH on YouTube! Thanks nya~",B站关注起名钉子户谢谢喵~
+tip5,"Be freestyle like a Jesus girl",Be freestyle like a Jesus girl
+tip6,"Only feels like... I forgot",Only feels like……后面忘了
+tip7,"The fact that you're reading this tip means you've already seen it",当你看到这条tip的时候说明你看到了这条tip
+tip8,"Every 60 seconds you spend is like one minute you've actually lived",你每度过60秒就等于你度过了1分钟
+tip9,"Does anyone actually read these tips?",真得有人会看这些吗？
+tip10,"O Fortuna velut luna statu variabilis...",O Fortuna velut luna statu variabilis...
+tip11,"You're a catgirl",你是一只猫娘
+tip12,"IM WATCHING YOU",IM WATCHING YOU
+tip13,"zzz",zzz
+tip14,"Don't you have anything more important to do?",你难道就没有更重要的事情做吗？
+tip15,"WAHT",WAHT
+tip16,"2112",2112
+tip17,"Yes you are right, but Phiator is a I forgot what I want to say",你说得对，但是Phiator是一款后面忘了
+tip18,"Phiator!!!!!!",Phiator！！！！！！
+tip19,"Ouch! Phiator crashed... This isn't Phiator's fault! Definitely not!",哎哟！Phiator崩溃了……这不是Phiator的错！绝对不是！
+tip20,"Do you know I don't know what you are thinking about me",你知道我不知道你在想关于我的什么吗
+tip21,"The server is busy, please try again later.",服务器繁忙，请稍后再试。
+tip22,"Dudu I have no time to write it",我懒得写了
+tip23,"Today is the day after yesterday",今天是昨天的明天
+tip24,"You have seen {num} tips! How about having a rest?",你已经看了{num}个tip了！休息一下好不好？
+tip25,"←To be continued",←To be continued
+tip26,"It's! T! V! Time!",It's! T! V! Time!
+tip27,"The catgirl is so cute nya",猫娘可爱喵
+tip28,"67!!!",67！！！
+tip29,"Do you know how many tips there are in total here?",你知道这里一共有多少个tip吗？
+tip30,"Phiator detected that you are shitting. Deleting your Phiator pass code... Deleted successfully.",Phiator检测到你正在熬大粪。正在删除你的Phiator通行证代码……删除成功。
+tip31,"I'm really absolutely super angry just now",我现在超级无敌生气暴怒
+tip32,"Crazy Thursday v me 50",疯狂星期四v我50
+tip33,"Tip: Tip: Tip: Tip: ",Tip: Tip: Tip: Tip: 
+tip34,"I wrote 100 tips!",我写了100个tip！
+tip35,"XXX XX XX XXXXXXX",XXX XX XX XXXXXXX
+tip36,"You're up! Go to make charts",你醒啦，起来写谱
+tip37,"Click here to start charting with brainwaves",点击此处开始脑电波写谱
+tip38,"java.lang.NullPointerException",java.lang.NullPointerException
+tip39,"Lend me your power!",Lend me your power!
+tip40,"far in the blue sky...",far in the blue sky...
+tip41,"In the time it takes you to make a chart, DZH have already found NaN problems",你写一张谱的时间，钉子户就已经发现NaN个问题了
+tip42,"This tip is generated by AI",此tip为AI生成
+tip43,"What are you expected for?",你在期待什么？
+tip44,"(Pornographic sounds)",齁齁哦哦哦哦哦哦
+tip45,"It's time to be a [[BIG SHOT]]!",是时候成为一个【大人物】了！
+tip46,"I can do anything!",我无所不能！
+tip47,"Let's fucking go!!!",Let's fucking go!!!
+tip48,"1225",1225
+tip49,"*Couldn't find            your hands.",*找不到            你的手了。
+tip50,"Does cyber DZH dream about electroic Phiator?",赛博钉子户会梦到电子Phiator吗？
+tip51,"Did you placed a base event (watching closely)",放垫底事件了吗（盯）
+tip52,"      ","                        "
+tip53,"Tips are all useless... Maybe.",tips全是没用的东西……或许吧。
+tip54,"Detected there is a pigeon near by... Within 5 meters.",检测到附近有一只鸽子……在5米以内。
+tip55,"* Proceed",* 继续前进
+tip56,"If you met some problems when using the app, please report them in the Discord server!",如果你在使用APP的时候遇到了问题，请在QQ频道里向我汇报！
+tip57,"A mysterious counter recorded a mysteriois number: {num}",一个神秘的计数器记录了一个神秘的数字：{num}
+tip58,"This is a tip",这是一条tip
+tip59,"I fixed 100 bugs!",我修复了100个bug！
+tip60,"This is a bug",这是一个bug
+tip61,"This is not a tip",这不是一条tip
+tip62,"AI charting? Sounds cool but not reliable",AI写谱？听起来挺酷但不靠谱
+tip63,"This tip is not generated by AI",此tip不为AI生成
+tip64,"Paper(The author of an editor that requires payment): I'm a little sad because I earned little today",纸张（一款付费编辑器的作者）：主要就是今天没赚多少  我有点不开心
+tip65,"Followers of Paper(The author of an editor that requires payment): Editors are not part of community content",纸张（一款付费编辑器的作者）拥护者：制谱器不属于社区内容
+transition,Transition type: ,缓动类型：
+type,Type: ,类型：
+ui_bind,UI bind: ,UI绑定：
+undo,Undo,撤销
+undo_msg,Undo: {action},撤销：{action}
+unsupported_format,Unsupported format.,不支持的格式。
+v_lines,V lines,竖线数量
+value,Value: ,值：
+warning,Warning,警告
+wide,Wide: ,宽度：
+x_pos,X pos: ,X坐标：
+y_offset,Y offset: ,Y偏移：
+z_index,Z index: ,Z层级：

@@ -1,0 +1,307 @@
+[gd_scene load_steps=25 format=3 uid="uid://8f0h8no852s2"]
+
+[ext_resource type="Script" uid="uid://5xa3esgyebvo" path="res://editor.gd" id="1_wksbx"]
+[ext_resource type="Script" uid="uid://5ve51s5n05oj" path="res://editor_music.gd" id="3_1ys5w"]
+[ext_resource type="Script" uid="uid://gujxeqdvao56" path="res://editor_play.gd" id="5_4s0cy"]
+[ext_resource type="Script" uid="uid://bw2n7tv5no0hc" path="res://editor_scroll.gd" id="7_kxsle"]
+[ext_resource type="Script" uid="uid://c8wbtk7opt0b5" path="res://editor_note.gd" id="8_3v1c7"]
+[ext_resource type="Script" uid="uid://o57qlmpcbtaw" path="res://editor_select.gd" id="8_8yjtx"]
+[ext_resource type="Script" uid="uid://dtt6kkooxhipa" path="res://editor_save.gd" id="8_wksbx"]
+[ext_resource type="Script" uid="uid://ce6ipjackbspy" path="res://spin_box.gd" id="9_3b0jk"]
+[ext_resource type="Texture2D" uid="uid://df8c48pbfj5x5" path="res://textures/play.png" id="10_3v1c7"]
+[ext_resource type="Script" uid="uid://1j1v11rik01h" path="res://editor_home.gd" id="11_3b0jk"]
+[ext_resource type="Texture2D" uid="uid://foeqvguigdac" path="res://textures/pause.png" id="11_qd6k7"]
+[ext_resource type="Theme" uid="uid://olmpbjqrcyj7" path="res://main.tres" id="12_c5twx"]
+[ext_resource type="StyleBox" uid="uid://cuw5ltcubw377" path="res://button_stylebox.tres" id="12_kwc7g"]
+[ext_resource type="Texture2D" uid="uid://bykgxmtalxroi" path="res://textures/cursor.png" id="13_2qtvm"]
+[ext_resource type="Script" uid="uid://dv1bj81ouqxh8" path="res://editor_mode.gd" id="13_kwc7g"]
+[ext_resource type="StyleBox" uid="uid://cvk68qh4le38n" path="res://line_edit_stylebox.tres" id="13_mcmho"]
+[ext_resource type="Script" uid="uid://cabt3edd0iv77" path="res://editor_properties_option.gd" id="13_thlol"]
+[ext_resource type="StyleBox" uid="uid://dk57i6p10h70c" path="res://window.tres" id="17_qd6k7"]
+[ext_resource type="StyleBox" uid="uid://c7y6qoj8xsls7" path="res://cancel_stylebox.tres" id="20_mcmho"]
+[ext_resource type="Script" uid="uid://6k041vkdq6ql" path="res://window_cancel.gd" id="21_thlol"]
+[ext_resource type="StyleBox" uid="uid://cvomuwmy6gjgv" path="res://ok_stylebox.tres" id="22_ta0gc"]
+[ext_resource type="Script" uid="uid://df1o3rtecbwdt" path="res://editor_home_ok.gd" id="23_ajpey"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_acw8i"]
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pw4om"]
+bg_color = Color(0, 0, 0, 0.5019608)
+border_width_left = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[node name="Editor" type="AspectRatioContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("12_c5twx")
+ratio = 1.7778
+script = ExtResource("1_wksbx")
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 2
+ratio = 1.7778
+
+[node name="Illustration" type="TextureRect" parent="AspectRatioContainer"]
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Blur" type="ColorRect" parent="AspectRatioContainer"]
+layout_mode = 2
+color = Color(0, 0, 0, 0.6)
+
+[node name="Control" type="Control" parent="AspectRatioContainer"]
+layout_mode = 2
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+script = ExtResource("3_1ys5w")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Control" type="Control" parent="PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="PanelContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+ratio = 1.7778
+
+[node name="Lines" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Note" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines"]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("8_3v1c7")
+
+[node name="Event" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="00" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="1" type="ColorRect" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+custom_minimum_size = Vector2(2.5, 0)
+layout_mode = 2
+mouse_filter = 1
+color = Color(1, 1, 0, 1)
+
+[node name="01" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="2" type="ColorRect" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+custom_minimum_size = Vector2(2.5, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+color = Color(1, 1, 0, 1)
+
+[node name="02" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="3" type="ColorRect" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+custom_minimum_size = Vector2(2.5, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+color = Color(1, 1, 0, 1)
+
+[node name="03" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="4" type="ColorRect" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+custom_minimum_size = Vector2(2.5, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+color = Color(1, 1, 0, 1)
+
+[node name="04" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="5" type="ColorRect" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+custom_minimum_size = Vector2(2.5, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+color = Color(1, 1, 0, 1)
+
+[node name="05" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/Lines/Event"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="HLines" type="ScrollContainer" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/HLines"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 64
+
+[node name="Note" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/HLines/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Event" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/HLines/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+script = ExtResource("7_kxsle")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 64
+
+[node name="Note" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Event" type="Control" parent="PanelContainer/VBoxContainer/Control/AspectRatioContainer/ScrollContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="Operations" type="PanelContainer" parent="PanelContainer/VBoxContainer/Control/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("17_qd6k7")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Save" type="PanelContainer" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("12_kwc7g")
+script = ExtResource("8_wksbx")
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer/Save"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "保存谱面"
+horizontal_alignment = 1
+
+[node name="HLines" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer/HLines"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "横线数量"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer/HLines"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 1024.0
+value = 4.0
+update_on_text_changed = true
+script = ExtResource("9_3b0jk")
+
+[node name="VLines" type="HBoxContainer" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer/VLines"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 32
+text = "竖线数量"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpinBox" type="SpinBox" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer/VLines"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 512.0
+value = 21.0
+update_on_text_changed = true
+script = ExtResource("9_3b0jk")
+
+[node name="IntervalLabel" type="Label" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "横线间距"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Interval" type="HSlider" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_vertical = 1
+min_value = 0.1
+max_value = 0.9
+step = 0.01
+value = 0.5
+
+[node name="Home" type="PanelContainer" parent="PanelContainer/VBoxContainer/Control/HBoxContainer/Operations/MarginContainer/ScrollC

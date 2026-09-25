@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://bwhd8o3oll5mu"]
+
+[ext_resource type="StyleBox" uid="uid://cvk68qh4le38n" path="res://line_edit_stylebox.tres" id="1_td8tk"]
+[ext_resource type="StyleBox" uid="uid://cuw5ltcubw377" path="res://button_stylebox.tres" id="2_dfbja"]
+[ext_resource type="Script" uid="uid://b7xvuqliytt2y" path="res://bpm_delete.gd" id="3_u1fa4"]
+
+[node name="BPM" type="VBoxContainer" unique_id=639349872]
+theme_override_constants/separation = 0
+
+[node name="BeatLabel" type="Label" parent="." unique_id=641380113]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "beat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Beat" type="HBoxContainer" parent="." unique_id=2045827214]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="1" type="LineEdit" parent="Beat" unique_id=1294576983]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_td8tk")
+text = "0"
+alignment = 1
+drag_and_drop_selection_enabled = false
+virtual_keyboard_type = 2
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="2" type="Label" parent="Beat" unique_id=1771036418]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = ":"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3" type="LineEdit" parent="Beat" unique_id=1367492394]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_td8tk")
+text = "0"
+alignment = 1
+drag_and_drop_selection_enabled = false
+virtual_keyboard_type = 2
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="4" type="Label" parent="Beat" unique_id=1705472915]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "/"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="5" type="LineEdit" parent="Beat" unique_id=569934084]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_td8tk")
+text = "1"
+alignment = 1
+drag_and_drop_selection_enabled = false
+virtual_keyboard_type = 2
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="ValueLabel" type="Label" parent="." unique_id=922029683]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 24
+text = "value"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Value" type="LineEdit" parent="." unique_id=553609343]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = ExtResource("1_td8tk")
+text = "120.0"
+alignment = 1
+drag_and_drop_selection_enabled = false
+virtual_keyboard_type = 3
+caret_blink = true
+caret_blink_interval = 0.5
+
+[node name="Delete" type="PanelContainer" parent="." unique_id=634231101]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_dfbja")
+script = ExtResource("3_u1fa4")
+
+[node name="Label" type="Label" parent="Delete" unique_id=2077034995]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "delete"
+horizontal_alignment = 1
